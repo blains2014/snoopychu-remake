@@ -26,7 +26,7 @@ juce_add_plugin(OSOTRUXE
     FORMATS VST3 Standalone
     PRODUCT_NAME "OSOTRUXE"
 )
-
+juce_generate_juce_header(OSOTRUXE)
 juce_add_binary_data(OSOTRUXEAssets SOURCES Resources/logo.png)
 
 target_sources(OSOTRUXE
