@@ -22,5 +22,5 @@ jobs:
       - name: Upload VST3 Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: OSOTRUXE-Windows-VST3
-          path: build/OSOTRUXE_artefacts/Release/VST3/OSOTRUXE.vst3
+          name: snoopychu-Windows-VST3
+          path: build/OSOTRUXE_artefacts/Release/VST3/snoopychu.vst3
