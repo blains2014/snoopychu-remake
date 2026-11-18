@@ -1,4 +1,3 @@
-cmake_minimum_required(VERSION 3.22)
 project(OSOTRUXE VERSION 1.0.0)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -24,7 +23,7 @@ juce_add_plugin(OSOTRUXE
     PLUGIN_MANUFACTURER_CODE SnCh
     PLUGIN_CODE OsTx
     FORMATS VST3 Standalone
-    PRODUCT_NAME "OSOTRUXE"
+    PRODUCT_NAME "Snoopychu"
 )
 juce_generate_juce_header(OSOTRUXE)
 juce_add_binary_data(OSOTRUXEAssets SOURCES Resources/logo.png)
