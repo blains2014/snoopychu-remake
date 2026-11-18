@@ -1,0 +1,26 @@
+name: Build Windows VST3
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure CMake
+        run: cmake -B build -S OSOTRUXE -A x64
+
+      - name: Build VST3
+        run: cmake --build build --config Release --target OSOTRUXE_VST3
+
+      - name: Upload VST3 Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OSOTRUXE-Windows-VST3
+          path: build/OSOTRUXE_artefacts/Release/VST3/OSOTRUXE.vst3
